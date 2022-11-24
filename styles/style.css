@@ -16,7 +16,7 @@ html {
   --clr-seaweed: #177e89;
   --clr-green: #084c61;
   --clr-red: #db3a34;
-  --clr--yellow: #ffc857;
+  --clr-yellow: #ffc857;
   --clr-jet: #323031;
   --clr-white: #fffafa;
   --clr-black: #383838;
@@ -25,7 +25,15 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--clr-white);
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
 }
 
 /* global css */
@@ -39,4 +47,76 @@ a {
 
 li {
   list-style: none;
+}
+
+/* project css */
+.title {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.buttons {
+  height: 6rem;
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 700;
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-1 {
+  background-color: var(--clr-yellow);
+  border: 2px solid var(--clr-yellow);
+  color: var(--clr-seaweed);
+}
+
+.btn-2 {
+  background-color: var(--clr-green);
+  border: 2px solid var(--clr-green);
+  color: var(--clr-white);
+}
+
+.btn-3 {
+  background-color: var(--clr-red);
+  border: 2px solid var(--clr-red);
+  color: var(--clr-white);
+}
+
+.modal {
+  width: 420px;
+  margin: auto;
+  padding: 2rem 1rem;
+  background-color: var(--clr-white);
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+}
+
+.modal-body {
+  margin-bottom: 1rem;
+}
+
+.btn-close {
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--clr-red);
+  border: 2px solid var(--clr-red);
+  color: var(--clr-white);
+}
+
+.show {
+  display: block;
+}
+
+.close {
+  display: none;
 }
